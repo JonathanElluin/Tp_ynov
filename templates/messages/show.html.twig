@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div align="center">
+        <h1>Conversation</h1>
+        <table >
+            <thead class="table">
+            <tr>
+                <th>Auteur</th>
+                <th>Text</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for message in messages %}
+                <tr>
+                    <td><a}}">{{ message.author.username }}</a></td>
+                    <td>{{ message.text }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {{ form_start(form) }}
+            <input class="btn btn-success"  type="submit" value="Create" />
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div align="center" class="container">
+        <h1>Liste charge</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Prix</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for charge in charges %}
+
+                <tr>
+                    <td><a href="{{ path('charge_show', { 'id': charge.id }) }}">{{ charge.title}}</a></td>
+                    <td>
+                        <a>{{ charge.price}}</a>
+                    </td>
+                </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+        <a class="btn btn-success" href="{{ path('charge_new', { 'id': 0 }) }}" role="button">Creer une nouvelle charge</a>
+    </div>
+{% endblock %}

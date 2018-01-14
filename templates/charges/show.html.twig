@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div align="center">
+        <h1>Charge</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Prix</th>
+                <th>PJ</th>
+            </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>{{ charge.title }}</td>
+                    <td>{{ charge.price }}</td>
+                    <td><a href="file://{{ charge.joinFile}}">Pj</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

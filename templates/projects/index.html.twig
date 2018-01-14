@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div align="center" class="container">
+        <h1>Projets liste</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Titre</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for conv in conversations %}
+                <tr>
+                    <td>{{ conv.title }}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('conversation_show', { 'id': conv.id })}}">Voir</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+        <a class="btn btn-success" href="{{ path('project_new') }}" role="button">Nouveau projet</a>
+    </div>
+{% endblock %}

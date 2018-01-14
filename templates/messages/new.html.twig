@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div align="center">
+        <h1>Message creation</h1>
+
+        {{ form_start(form) }}
+        {{ form_row(formFil.title) }}
+        {{ form_widget(form) }}
+        {{ form_row(formFil.destinataire) }}
+        <input type="submit" value="Create" />
+        {{ form_end(form) }}
+
+        <ul>
+            <li>
+                <a href="{{ path('messages_index') }}">Back to the list</a>
+            </li>
+        </ul>
+    <div align="center">
+{% endblock %}

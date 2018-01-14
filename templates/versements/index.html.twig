@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div align="center" class="container">
+        <h1>Liste versements</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Montant</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+        </table>
+        <a class="btn btn-success" href="{{ path('versement_new') }}">Create a new versement</a>
+    </div>
+{% endblock %}
